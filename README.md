@@ -4,14 +4,14 @@ No final do artigo anterior realizamos a execução dos testes unitários rodand
 
 ## Por que é necessário um navegador para rodar os testes?
 
-## Setup com Chrome
+### Setup com Chrome
 
-## Setup com Opera
+### Setup com Opera
 
-## Setup com Mozilla
+### Setup com Mozilla
 
-## Setup com Microsoft Edge
+### Setup com Microsoft Edge
 
-## Setup com ChromeHeadless
+### Setup com ChromeHeadless
 
-## Setup com PhantomJS
+### Setup com PhantomJS
