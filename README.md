@@ -19,7 +19,7 @@ Maior parte das configurações podem ser compreendidas com facilidade, vamos fo
 - reporters: relatórios que o karma irá gerar com os testes unitários.
 - port: porta que irá rodar o servidor.
 - colors: habilita/desabilita as cores no output dos testes nos relatórios/logs.
-- logLevel: nivel de log que o console deve apresentar, podendo ser config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO ou config.LOG_DEBUG.
+- logLevel: nivel de log que o terminal deve apresentar, podendo ser config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO ou config.LOG_DEBUG.
 - autoWatch: habilita/desabilita que os testes rodem novamente caso tenham alterações.
 - browsers: navegador que o teste será rodado, por padrão é o Chrome.
 
@@ -45,4 +45,13 @@ Vamos analisar alguns pontos importantes:
 - it: é o teste unitário, nele teremos a declaração do título do teste e seu arrange/act/assert.
 - expect: é o assert do teste, devemos ter pelo menos um em cada teste.
 
-Para rodar os testes unitários, abra o console e execute "ng test"
+Para rodar os testes unitários com essa configuração padrão é necessário ter o Chrome instalado. Caso você não tenha e não queria instalar, no próximo artigo vou demonstrar como configurar outras opções de navegador.
+
+Abra o terminal e execute "ng test". O output será mais ou menos esse:
+
+![image](https://user-images.githubusercontent.com/73451858/151676291-88ce683e-3efa-45fb-9b90-4c60517776da.png)
+
+![image](https://user-images.githubusercontent.com/73451858/151676302-f93e06df-9de4-401f-a428-3e99b35cada8.png)
+
+
+
