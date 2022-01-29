@@ -10,7 +10,7 @@ Jasmine é o framework que vamos usar para escrever os testes unitários, ele co
 
 Vamos analisar o arquivo de configuração do Karma.
 
-![image](https://user-images.githubusercontent.com/73451858/151666406-ebfd671e-7876-41e6-a76a-36c7b2fb94da.png)
+![image](https://user-images.githubusercontent.com/73451858/151667459-022894fc-948c-4301-ac15-9743fb9e680f.png)
 
 Maior parte das configurações podem ser compreendidas com facilidade, vamos focar nas mais importantes:
 
@@ -27,7 +27,7 @@ Maior parte das configurações podem ser compreendidas com facilidade, vamos fo
 
 Esse é o arquivo de entrada dos testes da aplicação.
 
-![image](https://user-images.githubusercontent.com/73451858/151666813-5231f0c8-8dfe-47ea-af08-6277efc54c32.png)
+![image](https://user-images.githubusercontent.com/73451858/151667484-8c40d042-2f56-48d3-85de-a2bbc8e8e4bf.png)
 
 Dificilmente vamos alterar alguma configuração deste arquivo, então o que importa saber é que aqui é inicializado o ambiente dos testes e configurado quais arquivos são considerados como teste unitário (por padrão são todos os arquivos que terminam com "spec.ts").
 
