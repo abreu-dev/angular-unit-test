@@ -1,4 +1,4 @@
-# Angular: Testes Unitários com Jasmine e Karma
+# Angular: Testes Unitários com Karma e Jasmine
 
 No final do artigo anterior realizamos a execução dos testes unitários rodando com o Chrome, porém, há diversas opções para navegador diferentes para cada situação e cada um tem sua vantagem e desvantagem.
 
