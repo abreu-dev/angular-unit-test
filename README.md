@@ -61,7 +61,7 @@ Por mais que vá rodar somente no terminal, ainda é necessário ter o navegador
 
 Caso você queria rodar com ChromeHeadless, mas não deseja instalar o navegador ou vá rodar por meio de uma Pipeline, precisamos configurar um outro pacote chamado "Puppeteer".
 
-Necessário ter instalado os pacotes "karma-chrome-launcher" e "puppeter" como dependência de desenvolvimento.
+Necessário ter instalado os pacotes "karma-chrome-launcher" e "puppeteer" como dependência de desenvolvimento.
 NPM Puppeter: https://www.npmjs.com/package/puppeteer
 
 ![image](https://user-images.githubusercontent.com/73451858/151709245-9a642ce6-4b25-474c-afe0-9268bbb776e6.png)
