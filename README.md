@@ -22,19 +22,26 @@ Por padrão a aplicação vem com dois relatórios, são eles "progress" e "kjht
 
 ![image](https://user-images.githubusercontent.com/73451858/151710021-85b8aa8b-97b6-4d9d-9651-7061150f7510.png)
 
+### Relatório de cobertura de código
+
 Também temos outro tipo de relatório que vem configurado por padrão, o relatório de cobertura de código que vem com o pacote "karma-coverage". 
 > Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-coverage).
 
-Para gerar esse relatório precisamos apenas adicionar ele a lista de relatórios.
+![image](https://user-images.githubusercontent.com/73451858/151711004-8e1e10ef-88cb-4fda-97f8-1b8091cf9ad8.png)
 
-![image](https://user-images.githubusercontent.com/73451858/151710270-e62e53e3-ec5c-411b-85c3-b53b53d9ae3c.png)
+Temos algumas configurações para gerar esse relatório de cobertura em "coverageReporter".
+- dir: pasta onde serão criados todos os arquivos de cobertura de código, a partir da raiz.
+- subir: caso queria configurar uma pasta dentro da pasta principal.
+- reporters: formatos de relatórios de serão criados, também é possível definir uma subdir para cada relatório. Temos as seguintes opções:
+  - "html": opção padrão, gera o index.html com as informações sobre cobertura.
+  - "lcov": gera tanto o html quanto o lcov que é um arquivo utilizado por ferramentas de análise de cobertura, como o Sonarqube.
+  - "lcovonly": gera apenas o arquivo lcov.
+  - "text": não gera um arquivo, aparece informação de cobertura de cada arquivo direto no terminal.
+  - "text-summary": não gera um arquivo, apenas aparece um resumo sobre cobertura no terminal.
+  - "cobertura": relatório em xml suportado pelo Jenkins
 
-Ao rodar os testes unitários será criada uma pasta chamada "coverage" na raiz do projeto, nela teremos todas as informações sobre cobertura de código, basta abrir o arquivo "index.html" para visualizar.
+Para gerar esse relatório precisamos rodar os testes adicionando o argumento para coletar cobertura "ng test --code-coverage true". Assim será criada uma pasta chamada "coverage" na raiz do projeto, nela teremos todas as informações sobre cobertura de código, basta abrir o arquivo "index.html" para visualizar.
 
-![image](https://user-images.githubusercontent.com/73451858/151710308-1f42ac5b-9eba-4f91-83f1-82aaef51e157.png)
+![image](https://user-images.githubusercontent.com/73451858/151710901-9e2d2c6f-e2a6-4406-8637-d0d906ebd29d.png)
 
-### Setup relatório HTML
-
-### Setup relatório JSON
-
-### Setup relatório LCOV
+![image](https://user-images.githubusercontent.com/73451858/151710857-b22477dd-2001-4de2-9d9b-48208a42664d.png)
