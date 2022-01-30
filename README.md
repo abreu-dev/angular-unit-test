@@ -18,6 +18,14 @@ Nas configurações do Karma solicitado como plugin e browser.
 
 ### Setup com Opera
 
+Necessário instalar o pacote "karma-opera-launcher" como dependência de desenvolvimento.
+
+![image](https://user-images.githubusercontent.com/73451858/151708554-abfefa4c-12db-41ea-ad06-dd922bf24c2d.png)
+
+Realizar configuração no Karma.
+
+![image](https://user-images.githubusercontent.com/73451858/151708586-e883793b-30fc-4323-8956-98fc60b031a2.png)
+
 ### Setup com Mozilla
 
 ### Setup com Microsoft Edge
