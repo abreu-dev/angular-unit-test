@@ -19,16 +19,35 @@ Nas configurações do Karma solicitado como plugin e browser.
 ### Setup com Opera
 
 Necessário instalar o pacote "karma-opera-launcher" como dependência de desenvolvimento.
+NPM: https://www.npmjs.com/package/karma-opera-launcher
 
 ![image](https://user-images.githubusercontent.com/73451858/151708554-abfefa4c-12db-41ea-ad06-dd922bf24c2d.png)
 
-Realizar configuração no Karma.
+Realizar configuração no Karma. 
 
 ![image](https://user-images.githubusercontent.com/73451858/151708586-e883793b-30fc-4323-8956-98fc60b031a2.png)
 
-### Setup com Mozilla
+### Setup com Firefox
+
+Necessário instalar o pacote "karma-firefox-launcher" como dependência de desenvolvimento.
+NPM: https://www.npmjs.com/package/karma-firefox-launcher
+
+![image](https://user-images.githubusercontent.com/73451858/151708654-11d44b9b-c40e-4375-bfd5-c951960250e7.png)
+
+Realizar configuração no Karma.
+
+![image](https://user-images.githubusercontent.com/73451858/151708705-0e357b09-681c-4685-a18f-59ca59f6f9ed.png)
 
 ### Setup com Microsoft Edge
+
+Necessário instalar o pacote "karma-edge-launcher" como dependência de desenvolvimento.
+NPM: https://www.npmjs.com/package/karma-edge-launcher
+
+![image](https://user-images.githubusercontent.com/73451858/151708762-dedb5b36-3969-46e6-8475-cc004c323c68.png)
+
+Realizar configuração no Karma.
+
+![image](https://user-images.githubusercontent.com/73451858/151708784-60fa2a7c-948c-4f3d-8a0b-e65e86058786.png)
 
 ### Setup com ChromeHeadless
 
