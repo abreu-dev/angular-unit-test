@@ -4,6 +4,8 @@ No final do artigo anterior realizamos a execução dos testes unitários rodand
 
 ## Por que é necessário um navegador para rodar os testes?
 
+O Karma é essencialmente uma ferramenta que cria um servidor web (logo precisa de um navegador) que executa o código-fonte em relação aos testes unitários.
+
 ### Setup com Chrome
 
 Esse é o setup padrão que vem ao inicializar o projeto Angular. 
