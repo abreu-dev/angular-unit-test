@@ -9,7 +9,7 @@ No final do artigo anterior realizamos a execução dos testes unitários rodand
 Esse é o setup padrão que vem ao inicializar o projeto Angular. 
 
 Conta com o pacote "karma-chrome-launcher" instalado nas dependências de desenvolvimento.
-NPM: https://www.npmjs.com/package/karma-chrome-launcher
+> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-chrome-launcher).
 
 ![image](https://user-images.githubusercontent.com/73451858/151708299-826d8ceb-8493-42bd-b7c8-46932ecd964b.png)
 
@@ -20,7 +20,7 @@ Nas configurações do Karma solicitado como plugin e browser.
 ### Setup com Opera
 
 Necessário instalar o pacote "karma-opera-launcher" como dependência de desenvolvimento.
-NPM: https://www.npmjs.com/package/karma-opera-launcher
+> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-opera-launcher).
 
 ![image](https://user-images.githubusercontent.com/73451858/151708554-abfefa4c-12db-41ea-ad06-dd922bf24c2d.png)
 
@@ -31,7 +31,7 @@ Realizar configuração no Karma.
 ### Setup com Firefox
 
 Necessário instalar o pacote "karma-firefox-launcher" como dependência de desenvolvimento.
-NPM: https://www.npmjs.com/package/karma-firefox-launcher
+> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-firefox-launcher).
 
 ![image](https://user-images.githubusercontent.com/73451858/151708654-11d44b9b-c40e-4375-bfd5-c951960250e7.png)
 
@@ -42,7 +42,7 @@ Realizar configuração no Karma.
 ### Setup com Microsoft Edge
 
 Necessário instalar o pacote "karma-edge-launcher" como dependência de desenvolvimento.
-NPM: https://www.npmjs.com/package/karma-edge-launcher
+> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-edge-launcher).
 
 ![image](https://user-images.githubusercontent.com/73451858/151708762-dedb5b36-3969-46e6-8475-cc004c323c68.png)
 
@@ -62,7 +62,7 @@ Por mais que vá rodar somente no terminal, ainda é necessário ter o navegador
 Caso você queria rodar com ChromeHeadless, mas não deseja instalar o navegador ou vá rodar por meio de uma Pipeline, precisamos configurar um outro pacote chamado "Puppeteer".
 
 Necessário ter instalado os pacotes "karma-chrome-launcher" e "puppeteer" como dependência de desenvolvimento.
-NPM Puppeter: https://www.npmjs.com/package/puppeteer
+> Você pode ver mais detalhes sobre o pacote Puppeter [aqui](https://www.npmjs.com/package/puppeteer).
 
 ![image](https://user-images.githubusercontent.com/73451858/151709245-9a642ce6-4b25-474c-afe0-9268bbb776e6.png)
 
