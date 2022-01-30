@@ -8,6 +8,7 @@ Os relatórios dos testes unitários são muito úteis para você visualizar vá
 - Quanto da sua aplicação está coberta.
 - O que está coberto e o que falta cobrir.
 - Testes que estão passando e falhando.
+- Métricas para ferramentas externas como SonarQube.
 
 Por padrão a aplicação vem com dois relatórios, são eles "progress" e "kjhtml". 
 
