@@ -9,6 +9,7 @@ No final do artigo anterior realizamos a execução dos testes unitários rodand
 Esse é o setup padrão que vem ao inicializar o projeto Angular. 
 
 Conta com o pacote "karma-chrome-launcher" instalado nas dependências de desenvolvimento.
+NPM: https://www.npmjs.com/package/karma-chrome-launcher
 
 ![image](https://user-images.githubusercontent.com/73451858/151708299-826d8ceb-8493-42bd-b7c8-46932ecd964b.png)
 
@@ -49,6 +50,24 @@ Realizar configuração no Karma.
 
 ![image](https://user-images.githubusercontent.com/73451858/151708784-60fa2a7c-948c-4f3d-8a0b-e65e86058786.png)
 
-### Setup com ChromeHeadless
+### Setup com ChromeHeadless com Chrome instalado
 
-### Setup com PhantomJS
+A ideia desse setup é caso você não queira abrir em um navegador, apenas rodar os testes pelo terminal.
+Por mais que vá rodar somente no terminal, ainda é necessário ter o navegador instalado. Portanto, siga o passo-a-passo anterior do "Setup com Chrome" e apenas troque o browser do Karma para "ChromeHeadless".
+
+![image](https://user-images.githubusercontent.com/73451858/151709083-2b65f37c-fc1e-433e-bb7c-3f6633cb3687.png)
+
+### Setup com ChromeHeadless sem Chrome instalado
+
+Caso você queria rodar com ChromeHeadless, mas não deseja instalar o navegador ou vá rodar por meio de uma Pipeline, precisamos configurar um outro pacote chamado "Puppeteer".
+
+Necessário ter instalado os pacotes "karma-chrome-launcher" e "puppeter" como dependência de desenvolvimento.
+NPM Puppeter: https://www.npmjs.com/package/puppeteer
+
+![image](https://user-images.githubusercontent.com/73451858/151709245-9a642ce6-4b25-474c-afe0-9268bbb776e6.png)
+
+Realizar configuração no Karma.
+
+![image](https://user-images.githubusercontent.com/73451858/151709285-3615e15c-5e18-441b-96b7-cad6da26df03.png)
+
+Pessoalmente esse é o setup que mais utilizado, visto que roda normalmente em Pipelines e em qualquer computador independemente do navegador que use.
