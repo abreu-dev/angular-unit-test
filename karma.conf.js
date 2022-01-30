@@ -10,6 +10,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-opera-launcher'),
       require('karma-firefox-launcher'),
+      require('karma-edge-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -39,7 +40,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Firefox'],
+    browsers: ['Edge'],
     singleRun: false,
     restartOnFileChange: true
   });
