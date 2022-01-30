@@ -2,8 +2,10 @@
 
 No artigo anterior vimos como realizar configurações para rodar os testes unitários em diversos navegadores, dessa vez vamos descobrir como configurar a geração de relatórios dos testes unitários em alguns formatos.
 
-## Setup relatório HTML
+## O que é o relatório e para que eu preciso?
 
-## Setup relatório JSON
+### Setup relatório HTML
 
-## Setup relatório LCOV
+### Setup relatório JSON
+
+### Setup relatório LCOV
