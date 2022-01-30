@@ -5,9 +5,9 @@ No artigo anterior vimos como realizar configurações para rodar os testes unit
 ## O que é o relatório e para que eu preciso?
 
 Os relatórios dos testes unitários são muito úteis para você visualizar várias informações:
-- Quanto da sua aplicação está coberta
-- O que está coberto e o que falta cobrir
-- Testes que estão passando e falhando
+- Quanto da sua aplicação está coberta.
+- O que está coberto e o que falta cobrir.
+- Testes que estão passando e falhando.
 
 Por padrão a aplicação vem com dois relatórios, são eles "progress" e "kjhtml". 
 
@@ -38,7 +38,7 @@ Temos algumas configurações para gerar esse relatório de cobertura em "covera
   - "lcovonly": gera apenas o arquivo lcov.
   - "text": não gera um arquivo, aparece informação de cobertura de cada arquivo direto no terminal.
   - "text-summary": não gera um arquivo, apenas aparece um resumo sobre cobertura no terminal.
-  - "cobertura": relatório em xml suportado pelo Jenkins
+  - "cobertura": relatório em xml suportado pelo Jenkins.
 
 Para gerar esse relatório precisamos rodar os testes adicionando o argumento para coletar cobertura "ng test --code-coverage true". Assim será criada uma pasta chamada "coverage" na raiz do projeto, nela teremos todas as informações sobre cobertura de código, basta abrir o arquivo "index.html" para visualizar.
 
