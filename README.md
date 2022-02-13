@@ -12,7 +12,7 @@ Há duas formas de se testar um componente:
 
 Abaixo irei demonstrar como testar das duas formas.
 
-### Testando apenas o código typescript.
+### Testando utilizando instância direta
 
 Com o arquivo .spec.ts criado, iremos realizar o setup necessário para instanciar a classe FruitListComponent. Vamos precisar criar um 'mock' da classe FruitService que o componente recebe como parâmetro para instancia-lo
 
@@ -27,4 +27,10 @@ Pode-se notar que no teste unitário do método 'ngOnInit', realizamos o spyOn d
 Por último, o teste sobre o método 'loadFruits'. Aqui vamos criar algumas frutas para o getAll da service retornar e validar se nosso componente realizou a chamada e as guardou na propriedade 'fruits'.
 
 ![image](https://user-images.githubusercontent.com/73451858/153770884-b454263d-3d9a-46b1-93fe-78e6cb59ecd8.png)
+
+Nosso componente está 100% testado!
+
+![image](https://user-images.githubusercontent.com/73451858/153770970-786fb2af-6e48-4414-a463-c47133c74d11.png)
+
+### Testando utilizando TestBed
 
