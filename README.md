@@ -1,47 +1,30 @@
 # Angular: Testes Unitários com Karma e Jasmine
 
-## Testando uma Service
+## Testando um Component
 
-Uma classe Service é a que irá realizar o envio de requisições a um servidor backend. Vamos realizar a criação de uma tela onde será feito gerenciamento de frutas, então primeiramente vamos criar a Service com os endpoints mais comuns.
+Um Component irá ser uma tela, terá um arquivo typescript, html e (normalmente) css. Para prosseguir no passo-a-passo de como testa-lo, sugiro dar uma olhada no setup que foi feito do componente nesse [commit](https://github.com/abreu-dev/angular-unit-test/commit/b44e4246050dce7719366cf05196a8b1b0f539c9). A ideia é um componente que lista as frutas cadastradas em um sistema, onde as obtém por um serviço backend.
 
-Antes disso, necessário criar a model.
+Para rodar o backend, utilize o arquivo db.json com [json-server](https://github.com/typicode/json-server).
 
-![image](https://user-images.githubusercontent.com/73451858/153768004-c3bcd5ab-68ae-4f33-8a6c-5cbbea6accd3.png)
+Há duas formas de se testar um componente:
+- Instanciando-o diretamente, como um service, onde só será possível testar o código typescript.
+- Instanciando o modulo, dessa forma é possível testar tanto a parte typescript quanto html e css.
 
-Adicione a propriedade 'apiUrl' aos arquivos environment.
+Abaixo irei demonstrar como testar das duas formas.
 
-![image](https://user-images.githubusercontent.com/73451858/153768011-a3e3fb6e-259c-46af-8cab-51e6df6f92be.png)
+### Testando apenas o código typescript.
 
-![image](https://user-images.githubusercontent.com/73451858/153768018-8f93389f-24ae-4e61-8e40-256cd01bc6bf.png)
+Com o arquivo .spec.ts criado, iremos realizar o setup necessário para instanciar a classe FruitListComponent. Vamos precisar criar um 'mock' da classe FruitService que o componente recebe como parâmetro para instancia-lo
 
-Criar a classe Service.
+![image](https://user-images.githubusercontent.com/73451858/153770682-bb907087-5ef4-4a27-95c3-738714f11877.png)
 
-![image](https://user-images.githubusercontent.com/73451858/153768932-3508d4fd-40cd-4ae6-bc2b-8958b703b582.png)
+Feito isso, podemos criar os primeiros testes unitários sobre o componente.
 
-Para realizar a criação dos testes unitários dessa classe, vamos inicializar o arquivo .spec.ts vazio.
+![image](https://user-images.githubusercontent.com/73451858/153770669-ad8d3ecc-5fd7-4024-b175-9cceae8eeaa7.png)
 
-![image](https://user-images.githubusercontent.com/73451858/153768061-317f5671-3ac5-471f-a081-d83fb83dd118.png)
+Pode-se notar que no teste unitário do método 'ngOnInit', realizamos o spyOn de um método do próprio componente com um callFake, pois como o método apenas executa outro, só precisamos validar se ele está sendo chamado, não nos importa o que ele irá fazer lá.
 
-Vamos precisar ter tanto a service quanto um 'mock' do HttpClient que ela recebe como parâmetro, 'mock' que será feito usando a biblioca do Jasmine.
+Por último, o teste sobre o método 'loadFruits'. Aqui vamos criar algumas frutas para o getAll da service retornar e validar se nosso componente realizou a chamada e as guardou na propriedade 'fruits'.
 
-![image](https://user-images.githubusercontent.com/73451858/153767717-4f3fcfbb-b2c0-461c-b7d2-5908dea84db3.png)
-
-Após isso, precisamos criar um beforeEach para instanciar essas classes.
-
-![image](https://user-images.githubusercontent.com/73451858/153768242-77088131-1867-4856-b900-2d215e344e33.png)
-
-Agora o setup para podermos testar a classe está completo, podemos começar a criação dos testes de cada método. Assim ficam os testes sobre getAll/getById
-
-![image](https://user-images.githubusercontent.com/73451858/153768874-ffd690a2-e0e8-4a42-a920-bde9bb31db03.png)
-
-Percebe-se que no beforeEach, há necessidade de incluir no array ao mockar HttpClient o método dele que será chamado na classe Service, pois assim o método ficara sendo observado pelo Jasmine para poder mockar o seu retorno e validar se ele foi de fato executado e com quais parâmetros.
-
-Finalizando, os testes dos demais métodos.
-
-![image](https://user-images.githubusercontent.com/73451858/153769131-2279aa69-d75c-4529-948f-3aefced0bc1d.png)
-
-Podemos validar no relatório de coverage quanto que conseguimos cobrir dessa classe.
-
-![image](https://user-images.githubusercontent.com/73451858/153769221-143d86c7-f5a4-4721-89fe-29a6d332fcb6.png)
-
+![image](https://user-images.githubusercontent.com/73451858/153770884-b454263d-3d9a-46b1-93fe-78e6cb59ecd8.png)
 
