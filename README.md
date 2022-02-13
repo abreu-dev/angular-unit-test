@@ -5,3 +5,4 @@ Como todos sabemos, testes unitários são muito importantes para garantir a seg
 - [#1](https://github.com/abreu-dev/angular-unit-test/tree/pagina/1) - Primeiros passos com testes unitários em Angular com Karma e Jasmine.
 - [#2](https://github.com/abreu-dev/angular-unit-test/tree/pagina/2) - Rodando os testes unitários em diferentes navegadores.
 - [#3](https://github.com/abreu-dev/angular-unit-test/tree/pagina/3) - Geração de relatórios sobre cobertura de código.
+- [#4](https://github.com/abreu-dev/angular-unit-test/tree/pagina/4) - Testando uma Service.
