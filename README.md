@@ -1,48 +1,47 @@
 # Angular: Testes Unitários com Karma e Jasmine
 
-No artigo anterior vimos como realizar configurações para rodar os testes unitários em diversos navegadores, dessa vez vamos descobrir como configurar a geração de relatórios dos testes unitários em alguns formatos.
+## Testando uma Service
 
-## O que é o relatório e para que eu preciso?
+Uma classe Service é a que irá realizar o envio de requisições a um servidor backend. Vamos realizar a criação de uma tela onde será feito gerenciamento de frutas, então primeiramente vamos criar a Service com os endpoints mais comuns.
 
-Os relatórios dos testes unitários são muito úteis para você visualizar várias informações:
-- Quanto da sua aplicação está coberta.
-- O que está coberto e o que falta cobrir.
-- Testes que estão passando e falhando.
-- Métricas para ferramentas externas como SonarQube.
+Antes disso, necessário criar a model.
 
-Por padrão a aplicação vem com dois relatórios, são eles "progress" e "kjhtml". 
+![image](https://user-images.githubusercontent.com/73451858/153768004-c3bcd5ab-68ae-4f33-8a6c-5cbbea6accd3.png)
 
-![image](https://user-images.githubusercontent.com/73451858/151710163-ab787ac8-61ff-4d6c-abfb-6d6a65f409e2.png)
+Adicione a propriedade 'apiUrl' aos arquivos environment.
 
-- "progress" é o que aparece no terminal quando você roda os testes e diz quanto tempo levou e quantos deram certo/errado.
+![image](https://user-images.githubusercontent.com/73451858/153768011-a3e3fb6e-259c-46af-8cab-51e6df6f92be.png)
 
-![image](https://user-images.githubusercontent.com/73451858/151710125-9775e294-73d4-4ec4-a57e-24d6cb30b49d.png)
+![image](https://user-images.githubusercontent.com/73451858/153768018-8f93389f-24ae-4e61-8e40-256cd01bc6bf.png)
 
-- "kjhtml" ou "karma-jasmine-html-reporter" é quando você abre o navegador na porta que está rodando os testes e aparece a seguinte tela.
-> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-jasmine-html-reporter).
+Criar a classe Service.
 
-![image](https://user-images.githubusercontent.com/73451858/151710021-85b8aa8b-97b6-4d9d-9651-7061150f7510.png)
+![image](https://user-images.githubusercontent.com/73451858/153768932-3508d4fd-40cd-4ae6-bc2b-8958b703b582.png)
 
-### Relatório de cobertura de código
+Para realizar a criação dos testes unitários dessa classe, vamos inicializar o arquivo .spec.ts vazio.
 
-Também temos outro tipo de relatório que vem configurado por padrão, o relatório de cobertura de código que vem com o pacote "karma-coverage". 
-> Você pode ver mais detalhes sobre o pacote [aqui](https://www.npmjs.com/package/karma-coverage).
+![image](https://user-images.githubusercontent.com/73451858/153768061-317f5671-3ac5-471f-a081-d83fb83dd118.png)
 
-![image](https://user-images.githubusercontent.com/73451858/151711004-8e1e10ef-88cb-4fda-97f8-1b8091cf9ad8.png)
+Vamos precisar ter tanto a service quanto um 'mock' do HttpClient que ela recebe como parâmetro, 'mock' que será feito usando a biblioca do Jasmine.
 
-Temos algumas configurações para gerar esse relatório de cobertura em "coverageReporter".
-- dir: pasta onde serão criados todos os arquivos de cobertura de código, a partir da raiz.
-- subir: caso queria configurar uma pasta dentro da pasta principal.
-- reporters: formatos de relatórios de serão criados, também é possível definir uma subdir para cada relatório. Temos as seguintes opções:
-  - "html": opção padrão, gera o index.html com as informações sobre cobertura.
-  - "lcov": gera tanto o html quanto o lcov que é um arquivo utilizado por ferramentas de análise de cobertura, como o Sonarqube.
-  - "lcovonly": gera apenas o arquivo lcov.
-  - "text": não gera um arquivo, aparece informação de cobertura de cada arquivo direto no terminal.
-  - "text-summary": não gera um arquivo, apenas aparece um resumo sobre cobertura no terminal.
-  - "cobertura": relatório em xml suportado pelo Jenkins.
+![image](https://user-images.githubusercontent.com/73451858/153767717-4f3fcfbb-b2c0-461c-b7d2-5908dea84db3.png)
 
-Para gerar esse relatório precisamos rodar os testes adicionando o argumento para coletar cobertura "ng test --code-coverage true". Assim será criada uma pasta chamada "coverage" na raiz do projeto, nela teremos todas as informações sobre cobertura de código, basta abrir o arquivo "index.html" para visualizar.
+Após isso, precisamos criar um beforeEach para instanciar essas classes.
 
-![image](https://user-images.githubusercontent.com/73451858/151710901-9e2d2c6f-e2a6-4406-8637-d0d906ebd29d.png)
+![image](https://user-images.githubusercontent.com/73451858/153768242-77088131-1867-4856-b900-2d215e344e33.png)
 
-![image](https://user-images.githubusercontent.com/73451858/151710857-b22477dd-2001-4de2-9d9b-48208a42664d.png)
+Agora o setup para podermos testar a classe está completo, podemos começar a criação dos testes de cada método. Assim ficam os testes sobre getAll/getById
+
+![image](https://user-images.githubusercontent.com/73451858/153768874-ffd690a2-e0e8-4a42-a920-bde9bb31db03.png)
+
+Percebe-se que no beforeEach, há necessidade de incluir no array ao mockar HttpClient o método dele que será chamado na classe Service, pois assim o método ficara sendo observado pelo Jasmine para poder mockar o seu retorno e validar se ele foi de fato executado e com quais parâmetros.
+
+Finalizando, os testes dos demais métodos.
+
+![image](https://user-images.githubusercontent.com/73451858/153769131-2279aa69-d75c-4529-948f-3aefced0bc1d.png)
+
+Podemos validar no relatório de coverage quanto que conseguimos cobrir dessa classe.
+
+![image](https://user-images.githubusercontent.com/73451858/153769221-143d86c7-f5a4-4721-89fe-29a6d332fcb6.png)
+
+
