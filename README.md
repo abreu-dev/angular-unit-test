@@ -7,3 +7,4 @@ Como todos sabemos, testes unitários são muito importantes para garantir a seg
 - [#3](https://github.com/abreu-dev/angular-unit-test/tree/pagina/3) - Geração de relatórios sobre cobertura de código.
 - [#4](https://github.com/abreu-dev/angular-unit-test/tree/pagina/4) - Testando uma Service.
 - [#5](https://github.com/abreu-dev/angular-unit-test/tree/pagina/5) - Testando um Component.
+- [#6](https://github.com/abreu-dev/angular-unit-test/tree/pagina/6) - Alguma dicas para facilitar a execução dos testes unitários.
