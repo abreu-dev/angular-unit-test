@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>Manage <b>Fruits</b></h3>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <td>Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let fruit of fruits">
+                        <td>{{ fruit.id }}</td>
+                        <td>{{ fruit.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
